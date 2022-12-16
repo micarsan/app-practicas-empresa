@@ -16,7 +16,7 @@ class Reports extends BaseController
 			'title_meta' => view('partials/title-meta', ['title' => 'Listado de reportes']),
 			'page_title' => view('partials/page-title', ['title' => 'Datatables', 'pagetitle' => 'Tabla'])
 		];
-		return view('reports-show', $data);
+		return view('reports-list', $data);
 	}
 
 

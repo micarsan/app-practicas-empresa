@@ -46,10 +46,6 @@
         div.dataTables_wrapper div.buttons {
             text-align: right;
         }
-
-
-
-
     </style>
 
     <?= $this->include('partials/head-css') ?>
@@ -258,19 +254,20 @@
                             <div class="modal-body">
                                 <form action="/" method="post">
                                     <div class="mb-3">
-                                        <label for="datepicker-date" class="col-form-label">Fecha</label>
+                                        <label for="datepicker-hour" class="col-form-label">Nombre</label>
+                                        <input type="text" class="form-control flatpickr-input active" name="name" id="name" class="datepicker-hour">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="datepicker-hour" class="col-form-label">Apellidos</label>
+                                        <input type="text" class="form-control flatpickr-input active" name="surname" id="surname">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="datepicker-date" class="col-form-label">Fecha de nacimiento</label>
                                         <input type="text" class="form-control flatpickr-input active" name="date" id="datepicker-date">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="datepicker-hour" class="col-form-label">Horas</label>
-                                        <input type="text" class="form-control flatpickr-input active" name="hour" id="datepicker-hour">
-                                    </div>
-                                    <div class="mb-3">
                                         <label for="reportText" class="col-form-label">Reporte del día:</label>
-                                        <textarea class="form-control" name="report" id="reportText" style="height: 150px;">Cambiar imagen en una web.
-Revisar problemas con un diseño.
-Actualizar contenido de la web principal de la empresa.
-Hacer fotocopias.</textarea>
+                                        <textarea class="form-control" name="report" id="reportText" style="height: 150px;"></textarea>
                                     </div>
                                 </form>
                             </div>
@@ -385,7 +382,7 @@ Hacer fotocopias.</textarea>
 
     document.querySelectorAll('.reports-new').forEach(function(item) {
         item.addEventListener('click', function() {
-            
+
             flatpickr('#datepicker-date-new', {
                 defaultDate: 'today',
                 dateFormat: "d/m/Y",
@@ -446,8 +443,6 @@ Hacer fotocopias.</textarea>
         });
 
     });
-
-
 </script>
 
 

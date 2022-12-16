@@ -18,10 +18,11 @@ class Users extends BaseController
 			'page_title' => view('partials/page-title', ['title' => 'Teacher profile', 'pagetitle' => 'Profile']),
 			'user_data' => $GLOBALS['user_data']
 		];
+		
 		if( $GLOBALS['user_data']['rol'] == 'teacher' )
-			return view('teachers-profile', $data);
+			return view('users-profile-teachers', $data);
 		else
-			return view('students-profile', $data);
+			return view('users-profile-students', $data);
 	}
 
 	/**
@@ -32,7 +33,7 @@ class Users extends BaseController
 			'title_meta' => view('partials/title-meta', ['title' => 'Listado de usuarios']),
 			'page_title' => view('partials/page-title', ['title' => 'Usuarios', 'pagetitle' => 'Listado'])
 		];
-		return view('users-list', $data);
+		return view('users_list', $data);
 
 	}
 

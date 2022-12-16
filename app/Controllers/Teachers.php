@@ -8,9 +8,8 @@ class Teachers extends BaseController
 		return $this->profile();
 	}
 
-
 	/**
-	 * Student profile
+	 * User profile
 	 */
 	public function profile(){
 		$data = [
@@ -18,8 +17,22 @@ class Teachers extends BaseController
 			'page_title' => view('partials/page-title', ['title' => 'Teacher profile', 'pagetitle' => 'Profile']),
 			'user_data' => $GLOBALS['user_data']
 		];
+		
 		return view('teachers-profile', $data);
 	}
+
+	/**
+	 * List of all users of 
+	 */
+	public function list() {
+		$data = [
+			'title_meta' => view('partials/title-meta', ['title' => 'Listado de usuarios']),
+			'page_title' => view('partials/page-title', ['title' => 'Usuarios', 'pagetitle' => 'Listado'])
+		];
+		return view('teachers_list', $data);
+
+	}
+
 
 
 }

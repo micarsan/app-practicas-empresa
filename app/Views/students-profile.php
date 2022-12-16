@@ -38,6 +38,7 @@
 
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <a class="dropdown-item" href="#">Editar datos</a>
+                                            <a class="dropdown-item" href="#">Cambiar contraseña</a>
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>

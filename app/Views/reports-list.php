@@ -24,21 +24,30 @@
     <link rel="stylesheet" href="assets/libs/flatpickr/flatpickr.min.css">
 
     <style>
-        .dataTables_wrapper .row:first-child {
+        div.dataTables_wrapper .row:first-child {
             padding-bottom: 12px;
             align-items: center;
         }
 
-        .dataTables_wrapper .row:first-child label {
+        div.dataTables_wrapper .row:first-child label {
             margin-bottom: 0px;
         }
 
-        .dataTables_wrapper th,
-        .dataTables_wrapper .table-center {
+        div.dataTables_wrapper th,
+        div.dataTables_wrapper div.table-center {
             text-align: center;
         }
-    </style>
 
+        div.dataTables_wrapper div.dataTables_filter {
+            text-align: center !important;
+            margin: 10px auto;
+        }
+
+        div.dataTables_wrapper div.buttons {
+            text-align: right;
+        }
+    </style>
+    
     <?= $this->include('partials/head-css') ?>
 
 </head>
@@ -427,7 +436,7 @@ Hacer fotocopias.</textarea>
                 }
             ],
             buttons: ['copy', 'excel', 'pdf', 'print'],
-            "dom": "<'row'<'col-sm-12 col-md-4'l><'col-sm-12 col-md-4'B><'col-sm-12 col-md-4'f>>" +
+            "dom": "<'row'<'col-sm-12 col-md-4'l><'col-sm-12 col-md-4'f><'col-sm-12 col-md-4 buttons'B>>" +
                 "<'row'<'col-sm-12'tr>>" +
                 "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
         });

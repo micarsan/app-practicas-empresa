@@ -38,16 +38,20 @@
                     </li>
 
                 <?php if ($GLOBALS['user_data']['rol'] == 'teacher') : ?>
+                    <li class="menu-title">Gestionar</li>
                     <li>
-                        <a href="/users-list"> <i class="uil-users-alt"></i> <span>Usuarios</span></a>
+                        <a href="/students-list"> <i class="uil-users-alt"></i> <span>Alumnos</span></a>
                     </li>
                     <li>
                         <a href="/companies-list"> <i class="uil-building"></i> <span>Empresas</span></a>
                     </li>
                     <li>
+                        <a href="/teachers-list"> <i class="uil-users-alt"></i> <span>Profesores</span></a>
+                    </li>
+                    <li>
                         <a href="chat">
                             <i class="uil-comments-alt"></i>
-                            <span class="badge rounded-pill bg-warning float-end"><?= lang('Files.New') ?></span>
+                            <span class="badge rounded-pill bg-warning float-end">2</span>
                             <span><?= lang('Files.Chat') ?></span>
                         </a>
                     </li>
@@ -58,7 +62,7 @@
                     <li>
                         <a href="chat">
                             <i class="uil-comments-alt"></i>
-                            <span class="badge rounded-pill bg-warning float-end"><?= lang('Files.New') ?></span>
+                            <span class="badge rounded-pill bg-warning float-end">2</span>
                             <span><?= lang('Files.Chat') ?></span>
                         </a>
                     </li>
