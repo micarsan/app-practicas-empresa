@@ -74,11 +74,11 @@ $routes->get('contacts-list', 'AppController::show_contacts_list');
 $routes->get('contacts-profile', 'AppController::show_contacts_profile');
 
 //Pages section routing
-$routes->get('auth-login', 'PageController::show_auth_login');
-$routes->get('auth-logout', 'PageController::logout');
-$routes->get('auth-register', 'PageController::show_auth_register');
-$routes->get('auth-recoverpw', 'PageController::show_auth_recoverpw');
-$routes->get('auth-lock-screen', 'PageController::show_auth_lock_screen');
+$routes->get('auth-login', 'PageController::auth_login');
+$routes->get('auth-logout', 'PageController::auth_logout');
+$routes->get('auth-register', 'PageController::auth_register');
+$routes->get('auth-recoverpw', 'PageController::auth_recoverpw');
+$routes->get('auth-lock-screen', 'PageController::auth_lock_screen');
 
 $routes->get('pages-starter', 'PageController::show_pages_starter');
 $routes->get('pages-maintenance', 'PageController::show_pages_maintenance');
