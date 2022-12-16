@@ -43,26 +43,11 @@
                         <span>Ver perfil</span>
                     </a>
                 </li>
-                
-                <li class="">
-                    <a aria-expanded="true">
-                        <i class="uil-file-alt"></i>
-                        <span>Reportes</span>
-                    </a>
-                    <ul class="sub-menu mm-collapse mm-show" aria-expanded="false">
-                        <li><a href="/reports"><i class="uil-file-copy-alt"></i> <span>Listado</span></a></li>
-                        <li><a href="/reports-new"><i class="uil-file-plus"></i> <span>Nuevo</span></a></li>
-                    </ul>
-                </li>
-
-                <li class="menu-title">Reportes</li>
 
                 <li>
-                    <a href="calendar" class="waves-effect">
-                        <i class="uil-calender"></i>
-                        <span><?= lang('Files.Calendar') ?></span>
-                    </a>
+                    <a href="/reports"><i class="uil-file-copy-alt"></i> <span>Reportes</span></a>
                 </li>
+                
 
                 <li>
                     <a href="chat" class=" waves-effect">
