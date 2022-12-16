@@ -34,11 +34,16 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/lang/{locale}', 'Language::index');
 
+// Users
+$routes->get('user-profile', 'Users::profile');
+$routes->get('users-list', 'Users::users_list');
+
+
 // Students
-$routes->get('students-profile', 'Students::profile');
+$routes->get('students-reports', 'Reports::list');
+
 
 // Teachers
-$routes->get('teachers-profile', 'Teachers::profile');
 
 // Chat
 $routes->get('chat', 'Chat::show_chat');

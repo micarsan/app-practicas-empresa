@@ -32,15 +32,20 @@
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
+                    
+                    <li>
+                        <a href="/user-profile"> <i class="uil-user-circle"></i> <span>Mi perfil</span></a>
+                    </li>
+
                 <?php if ($GLOBALS['user_data']['rol'] == 'teacher') : ?>
                     <li>
-                        <a href="/teachers-profile"> <i class="uil-user-circle"></i> <span>Ver perfil</span></a>
+                        <a href="/users-list"> <i class="uil-users-alt"></i> <span>Usuarios</span></a>
                     </li>
                     <li>
-                        <a href="/reports"> <i class="uil-file-copy-alt"></i> <span>Reportes</span></a>
+                        <a href="/companies-list"> <i class="uil-building"></i> <span>Empresas</span></a>
                     </li>
                     <li>
-                        <a href="chat" class=" waves-effect">
+                        <a href="chat">
                             <i class="uil-comments-alt"></i>
                             <span class="badge rounded-pill bg-warning float-end"><?= lang('Files.New') ?></span>
                             <span><?= lang('Files.Chat') ?></span>
@@ -48,13 +53,10 @@
                     </li>
                 <?php else : ?>
                     <li>
-                        <a href="/students-profile"> <i class="uil-user-circle"></i> <span>Ver perfil</span></a>
-                    </li>
-                    <li>
                         <a href="/reports"> <i class="uil-file-copy-alt"></i> <span>Reportes</span></a>
                     </li>
                     <li>
-                        <a href="chat" class=" waves-effect">
+                        <a href="chat">
                             <i class="uil-comments-alt"></i>
                             <span class="badge rounded-pill bg-warning float-end"><?= lang('Files.New') ?></span>
                             <span><?= lang('Files.Chat') ?></span>

@@ -106,9 +106,6 @@ exit;
                                 'home_route' => 'Teacher::profile',
                             ];
                             
-                            $session->set($user_data);
-                            header('location:/teachers-profile');
-                            
                             break;
                         
                         case 'alumno@dualapp.miguelcarmona.com':
@@ -140,13 +137,12 @@ exit;
                                 'home_route' => 'Students::profile',
                             ];
                             
-                            $session->set($user_data);
-                            header('location:/students-profile');
-                            
                             break;
-    
                     }
-                
+                    
+                    $session->set($user_data);
+                    header('location:/user-profile');
+        
                 } else {
                     header('location:/auth-login?incorrect-data');
                 
