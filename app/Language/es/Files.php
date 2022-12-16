@@ -9,6 +9,7 @@
     'Welcome' => 'Bienvenidos',
     'Inicio' => 'Inicio',
     'Dashboard' => 'Inicio',
+    'Listado de reportes' => 'Listado de reportes',
     'Layouts' => 'Diseños',
     'Horizontal' => 'Horizontal',
     'Vertical' => 'Vertical',
