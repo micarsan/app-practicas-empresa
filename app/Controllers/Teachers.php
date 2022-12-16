@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-class Students extends BaseController
+class Teachers extends BaseController
 {
 	public function index()
 	{
@@ -14,11 +14,11 @@ class Students extends BaseController
 	 */
 	public function profile(){
 		$data = [
-			'title_meta' => view('partials/title-meta', ['title' => 'Student profile']),
-			'page_title' => view('partials/page-title', ['title' => 'Student profile', 'pagetitle' => 'Profile']),
+			'title_meta' => view('partials/title-meta', ['title' => 'Teachers profile']),
+			'page_title' => view('partials/page-title', ['title' => 'Teachers profile', 'pagetitle' => 'Profile']),
 			'user_data' => $GLOBALS['user_data']
 		];
-		return view('students-profile', $data);
+		return view('teachers-profile', $data);
 	}
 
 

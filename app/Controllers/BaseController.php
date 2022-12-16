@@ -103,7 +103,12 @@ exit;
                                 'avatar'    => 'francisco-romero.jpg',
                                 'rol'       => 'teacher',
                                 'logged_in' => true,
+                                'home_route' => 'Teacher::profile',
                             ];
+                            
+                            $session->set($user_data);
+                            header('location:/teachers-profile');
+                            
                             break;
                         
                         case 'alumno@dualapp.miguelcarmona.com':
@@ -132,14 +137,15 @@ exit;
                                 'avatar'    => 'miguel_carmona.jpg',
                                 'rol'       => 'student',
                                 'logged_in' => true,
+                                'home_route' => 'Students::profile',
                             ];
+                            
+                            $session->set($user_data);
+                            header('location:/students-profile');
+                            
                             break;
     
                     }
-                    
-                    $session->set($user_data);
-
-                    header('location:/');
                 
                 } else {
                     header('location:/auth-login?incorrect-data');
