@@ -14,6 +14,15 @@ class PageController extends BaseController
 		return view('auth-login', $data);
 	}
 
+	public function logout(){
+		$session = session();
+		$session->destroy();
+		$data = [
+			'title_meta' => view('partials/title-meta', ['title' => 'Login'])
+		];
+		return view('auth-login', $data);
+	}
+
 	public function show_auth_register(){
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'Register'])

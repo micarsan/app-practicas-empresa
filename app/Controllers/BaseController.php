@@ -52,6 +52,7 @@ class BaseController extends Controller
         
 /*
 echo '<pre>';
+print_r($session->get());
 print_r($session);
 exit;
 */
@@ -72,13 +73,87 @@ exit;
 echo '<pre>';
 print_r($session->get);
 exit;
-        */
 
-        if( !$session->get('name')
-            && $_SERVER['REQUEST_URI'] != '/auth-login' ) {
-            header('location:/auth-login');
+        echo '<pre>';
+        print_r($_POST);
+        exit;
+*/
+
+
+        if( !$session->get('logged_in') && !( $_SERVER['REQUEST_URI'] == '/auth-login' | $_SERVER['REQUEST_URI'] == '/auth-login?incorrect-data') ) {
+
+            if( !empty($_POST) ) {
+                $valid_users = array('profesor@dualapp.miguelcarmona.com','alumno@dualapp.miguelcarmona.com');
+                if( in_array($_POST['user'], $valid_users) && $_POST['password'] == 'cesurformacion' ) {
+                        
+                    switch($_POST['user']) {
+                        case 'profesor@dualapp.miguelcarmona.com':
+                            $user_data = [
+                                'name'      => 'Francisco Romero',
+                                'short_name' => 'Francisco',
+                                'email'     => 'profesor@dualapp.miguelcarmona.com',
+                                'birthday'  => '30 de septiembre de 1982',
+                                'phone'     => '666 656 310',
+                                'course'    => [
+                                    'school'    => 'CESUR Málaga Este',
+                                    'title'     => 'Profesor',
+                                    'tutor'     => ''
+                                ],
+                                'lang'      => 'es',
+                                'avatar'    => 'francisco-romero.jpg',
+                                'rol'       => 'teacher',
+                                'logged_in' => true,
+                            ];
+                            break;
+                        
+                        case 'alumno@dualapp.miguelcarmona.com':
+                            $user_data = [
+                                'name'  => 'Miguel Carmona',
+                                'short_name' => 'Miguel',
+                                'email'     => 'alumno@dualapp.miguelcarmona.com',
+                                'birthday'  => '30 de septiembre de 1982',
+                                'phone'     => '666 656 310',
+                                'course'    => [
+                                    'school'    => 'CESUR Málaga Este',
+                                    'title'     => '2º Desarrollo Aplicaciones Informáticas',
+                                    'tutor'     => 'Francisco Romero'
+                                ],
+                                'company'   => [
+                                    'name'        => 'Tecnoempresa, S.L.',
+                                    'tutor'       => [
+                                        'name'      => 'Manuel Antúnez',
+                                        'phone'     => '987 654 321',
+                                        'email'     => 'info@tecnoempresa.com'
+                                    ],
+                                    'hours_done'  => '117',
+                                    'hours_total' => '156',
+                                ],
+                                'lang'      => 'es',
+                                'avatar'    => 'miguel_carmona.jpg',
+                                'rol'       => 'student',
+                                'logged_in' => true,
+                            ];
+                            break;
+    
+                    }
+                    
+                    $session->set($user_data);
+
+                    header('location:/');
+                
+                } else {
+                    header('location:/auth-login?incorrect-data');
+                
+                }
+            } else {
+                header('location:/auth-login');
+            
+            }
+
             exit;
         }
+
+        $GLOBALS['user_data'] = $session->get();
 
 
         $language = \Config\Services::language();

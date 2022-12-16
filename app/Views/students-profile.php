@@ -42,10 +42,10 @@
                                     </div>
                                     <div class="clearfix"></div>
                                     <div>
-                                        <img src="assets/images/users/miguel_carmona.jpg" alt="" class="avatar-lg rounded-circle img-thumbnail">
+                                        <img src="assets/images/users/<?php echo $user_data['avatar']; ?>" alt="" class="avatar-lg rounded-circle img-thumbnail">
                                     </div>
-                                    <h5 class="mt-3 mb-1">Miguel Carmona</h5>
-                                    <p class="text-muted">2º DAW</p>
+                                    <h5 class="mt-3 mb-1"><?php echo $user_data['name']; ?></h5>
+                                    <p class="text-muted">2º DAW - DUAL</p>
                                 </div>
 
                                 <hr class="my-4">
@@ -127,7 +127,7 @@
                                         </div>
 
                                         <div>
-                                            <h4 class="font-size-18 border-bottom-2px mb-3 mt-4">Diario de acciones</h4>
+                                            <h4 class="font-size-18 border-bottom-2px mb-3 mt-4">Últimos reportes</h4>
 
                                             <div class="table-responsive">
                                                 <table class="table table-wrap table-striped table-hover mb-0">

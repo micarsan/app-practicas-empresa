@@ -34,12 +34,28 @@
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li>
                     <a href="/">
-                        <i class="uil-home-alt"></i><span class="badge rounded-pill bg-primary float-end">01</span>
-                        <span><?= lang('Files.Dashboard') ?></span>
+                        <i class="uil-home-alt"></i> <span><?= lang('Files.Dashboard') ?></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/students-profile">
+                        <i class="uil-user-circle"></i>
+                        <span>Ver perfil</span>
                     </a>
                 </li>
                 
-                <li class="menu-title"><?= lang('Files.Apps') ?></li>
+                <li class="">
+                    <a aria-expanded="true">
+                        <i class="uil-file-alt"></i>
+                        <span>Reportes</span>
+                    </a>
+                    <ul class="sub-menu mm-collapse mm-show" aria-expanded="false">
+                        <li><a href="/reports"><i class="uil-file-copy-alt"></i> <span>Listado</span></a></li>
+                        <li><a href="/reports-new"><i class="uil-file-plus"></i> <span>Nuevo</span></a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-title">Reportes</li>
 
                 <li>
                     <a href="calendar" class="waves-effect">

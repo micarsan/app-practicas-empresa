@@ -1,4 +1,10 @@
-<header id="page-topbar">
+<?php
+
+$user_data = $GLOBALS['user_data'];
+//print_r( $GLOBALS['user_data'] ); exit;
+
+
+?><header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
@@ -219,16 +225,18 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="/assets/images/users/miguel_carmona.jpg"
-                        alt="Header Avatar">
-                    <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">Miguel</span>
+                    <img class="rounded-circle header-profile-user" src="/assets/images/users/<?php echo $user_data['avatar']; ?>" alt="">
+                    <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15"><?php echo $user_data['short_name']; ?></span>
                     <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="/students-profile?miguel-carmona"><i class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span class="align-middle"><?= lang('Files.View Profile') ?></span></a>
+                    <a class="dropdown-item" href="<?php
+                        if( $user_data['rol'] == 'teacher' ) echo '/teachers-profile';
+                        else echo '/students-profile';
+                    ?>"><i class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span class="align-middle"><?= lang('Files.View Profile') ?></span></a>
                     <a class="dropdown-item d-block" href="#"><i class="uil uil-cog font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle"> Configuración</span></a>
-                    <a class="dropdown-item" href="/auth-login"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle"><?= lang('Files.Sign out') ?></span></a>
+                    <a class="dropdown-item" href="/auth-logout"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle"><?= lang('Files.Sign out') ?></span></a>
                 </div>
             </div>
         </div>

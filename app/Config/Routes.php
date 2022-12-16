@@ -75,6 +75,7 @@ $routes->get('contacts-profile', 'AppController::show_contacts_profile');
 
 //Pages section routing
 $routes->get('auth-login', 'PageController::show_auth_login');
+$routes->get('auth-logout', 'PageController::logout');
 $routes->get('auth-register', 'PageController::show_auth_register');
 $routes->get('auth-recoverpw', 'PageController::show_auth_recoverpw');
 $routes->get('auth-lock-screen', 'PageController::show_auth_lock_screen');
