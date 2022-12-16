@@ -31,6 +31,10 @@
         .dataTables_wrapper .row:first-child label {
             margin-bottom: 0px;
         }
+        .dataTables_wrapper th,
+        .dataTables_wrapper .table-center {
+            text-align: center;
+        }
 
     </style>
 
@@ -79,7 +83,7 @@
                                             <th>Fecha</th>
                                             <th>Horas</th>
                                             <th>Resumen</th>
-                                            <th></th>
+                                            <th class="no-sort"></th>
                                         </tr>
                                     </thead>
 
@@ -342,21 +346,28 @@ Hacer fotocopias.</textarea>
             language: { url: 'assets/libs/datatables.net/l10n/es-ES.json' },
             lengthChange: true,
             "autoWidth": false,
+            order: [[0, 'desc']],
             "columnDefs": [{
                     'width': '1%',
-                    "targets": 0
+                    targets: 0,
+                    className: 'table-center'
                 },
                 {
                     'width': '1%',
-                    "targets": 0
+                    targets: 1,
+                    className: 'table-center'
                 },
                 {
-                    'width': '90%',
-                    "targets": 0
+                    'width': '97%'
                 },
                 {
                     'width': '1%',
-                    "targets": 0
+                    "targets": 'no-sort',
+                    "searchable": false,
+                    "orderable": false,
+                    "visible": true,
+                    targets: 3,
+                    className: 'table-center'
                 }
             ],
             buttons: [ 'copy', 'excel', 'pdf', 'print'],
