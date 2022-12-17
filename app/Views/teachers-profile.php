@@ -7,6 +7,13 @@
 
     <?= $this->include('partials/head-css') ?>
 
+    <style>
+        table.table-wrap a {
+            font-size: 1.2rem;
+        }
+
+    </style>
+
 </head>
 
 <?= $this->include('partials/body') ?>
@@ -45,8 +52,8 @@
                                     <div>
                                         <img src="assets/images/users/<?php echo $user_data['avatar']; ?>" alt="" class="avatar-lg rounded-circle img-thumbnail">
                                     </div>
-                                    <h5 class="mt-3 mb-1"><?php echo $user_data['name']; ?></h5>
-                                    <p class="text-muted">2º DAW - DUAL</p>
+                                    <h5 class="mt-3 mb-1">Francisco Romero</h5>
+                                    <p class="text-muted">CESUR Málaga este</p>
                                 </div>
 
                                 <hr class="my-4">
@@ -55,9 +62,9 @@
                                     <h4 class="border-bottom-2px">Datos personales</h4>
                                     <div class="table-responsive mt-3">
                                         <div>
-                                            <h5 class="font-size-16">Miguel Ángel Carmona Sánchez</h5>
-                                            <h5 class="font-size-14">30 de septiembre de 1982 (40 años)</h5>
-                                            <h5 class="font-size-14"><a href="tel:666656310">666 656 310</a> | <a href="mailto:info@miguelcarmona.com">info@miguelcarmona.com</a></h5>
+                                            <h5 class="font-size-16">Francisco Romero</h5>
+                                            <h5 class="font-size-14">27 de julio de 1977 (45 años)</h5>
+                                            <h5 class="font-size-14"><a href="tel:987654321">987 654 321</a> | <a href="mailto:francisco@franciscoromero.com">francisco@franciscoromero.com</a></h5>
                                         </div>
                                     </div>
                                 </div>
@@ -65,25 +72,12 @@
                                 <hr class="my-3">
 
                                 <div class="text-muted">
-                                    <h4 class="border-bottom-2px">Curso académico</h4>
+                                    <h4 class="border-bottom-2px">Centro académico</h4>
                                     <div class="table-responsive mt-3">
                                         <div>
                                             <h5 class="font-size-16">CESUR Málaga Este</h5>
-                                            <h5 class="font-size-14">2º Desarrollo Aplicaciones Informáticas</h5>
-                                            <h5 class="font-size-14">Tutor: <a href="#">Francisco Romero</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr class="my-3">
-
-                                <div class="text-muted">
-                                    <h4 class="border-bottom-2px">Empresa asignada</h4>
-                                    <div class="table-responsive mt-3">
-                                        <div>
-                                            <h5 class="font-size-16">Claroflex</h5>
-                                            <h5 class="font-size-14">Responsable: Franisco Oña</h5>
-                                            <h5 class="font-size-14"><a href="tel:987654321">987 654 321</a> | <a href="mailto:info@claroflex.com">info@claroflex.com</a></h5>
+                                            <h5 class="font-size-14">Inscrito en: 1ºDAW | 2ºDAW | 1ºDAM | 2ºDAW</h5>
+                                            <h5 class="font-size-14">Asignaturas: BDD, JS, Ent. Cli, PHP, Sistemas</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -119,157 +113,100 @@
                                 <div class="tab-pane active" id="progress" role="tabpanel">
                                     <div>
                                         <div>
-                                            <h4 class="font-size-18 border-bottom-2px mb-3 mt-2">Progreso en las prácticas</h4>
+                                            <h4 class="font-size-18 border-bottom-2px mb-3 mt-2">Progreso en el curso académico</h4>
                                             <div class="progress progress-xl animated-progess mb-2 p-1" style="height: 1.6rem;">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 30%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">1ª evaluación</div>
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 0%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">2ª evaluación</div>
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">3ª evaluación</div>
                                             </div>
-                                            <h5 class="font-size-16">Has completado 117 de 156 horas (19 de 26 días aprox.)</h5>
-                                            <p>Comenzaste el día 16 de noviembre y debes acabar el 10 de marzo.</p>
+                                            <h5 class="font-size-16">Has completado 68 de 204 días lectivos restantes.</h5>
+                                            <p>Comenzó el día 16 de septiembre y debe acabar el 10 de junio.</p>
                                         </div>
 
                                         <div>
-                                            <h4 class="font-size-18 border-bottom-2px mb-3 mt-4">Últimos reportes</h4>
+                                            <h4 class="font-size-18 border-bottom-2px mb-3 mt-4">Últimos reportes subidos por sus alumnos</h4>
 
                                             <div class="table-responsive">
                                                 <table class="table table-wrap table-striped table-hover mb-0">
                                                     <thead>
                                                         <tr>
+                                                            <th scope="col">Alumno</th>
                                                             <th scope="col">Fecha</th>
                                                             <th scope="col">Horas</th>
                                                             <th scope="col">Resumen</th>
-                                                            <th scope="col" style="width: 40px;"></th>
+                                                            <th scope="col" style="width: 20px;"></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>01 Dic 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>30 Nov 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>29 Nov 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>28 Nov 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>25 Nov 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>24 Nov 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>23 Nov 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>22 Nov 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>21 Nov 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                         <tr>
+                                                            <td>Miguel Carmona</td>
                                                             <td>18 Nov 2022</th>
                                                             <td>6h</td>
                                                             <td>Cambiar imagen en una web. Revisar problemas con un diseño...</td>
-                                                            <td>
-                                                                <div class="dropdown">
-                                                                    <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
-                                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
+                                                            <td><a type="button" href="/reports?student=34" style="color: inherit;"><i class="uil-eye"></i></a></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -280,8 +217,10 @@
                                 <div class="tab-pane" id="calendar" role="tabpanel">
                                     <div>
                                         <h4 class="font-size-18 border-bottom-2px mb-3 mt-2">Vista de calendario</h4>
-                                        <p>Aquí irá un calendario con un resumen de los días que tiene el diario creado, los que no y los festivos (algo así como la siguiente imagen).</p>
-                                        <img src="/assets/images/examples/user-profile-calendar.jpg" style="width: 100%" alt="Calendar preview">
+                                        <p>Aquí irá un calendario para detallar eventos como festivos, inicios/fin de prácticas, días que no estén creados los reportes de 
+                                            todos sus alumnos asignados y otras opciones que puedan ser útiles (algo así como se ve en la imagen siguiente)
+                                        </p>
+                                        <img src="/assets/images/examples/teacher-profile-calendar.png" style="width: 100%" alt="Calendar preview">
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="notifications" role="tabpanel">
@@ -291,10 +230,10 @@
                                             <div class="mt-0"><h4 class="font-size-18 border-bottom-2px mb-3 mt-2">Pendientes</h4></div>
 
                                             <div class="d-flex align-items-start border-bottom py-4">
-                                                <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/francisco-romero.jpg" alt="">
+                                                <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/miguel_carmona.jpg" alt="">
                                                 <div class="flex-grow-1">
-                                                    <h5 class="font-size-15 mt-0 mb-1">Francisco Romero <small class="text-muted float-end">Hace 2 días</small></h5>
-                                                    <p class="text-muted">Te falta por entregar 2 reportes de noviembre</p>
+                                                    <h5 class="font-size-15 mt-0 mb-1">Miguel Carmona <small class="text-muted float-end">Hace 2 días</small></h5>
+                                                    <p class="text-muted">Los actualizo y se los subo cuanto antes.</p>
                                                     <a href="javascript: void(0);" class="text-muted font-13 d-inline-block"><i class="mdi mdi-close-thick"></i> Descartar</a>
                                                 </div>
                                             </div>
@@ -302,7 +241,7 @@
                                                 <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-6.jpg" alt="">
                                                 <div class="flex-grow-1">
                                                     <h5 class="font-size-15 mt-0 mb-1">Carlos Raigón <small class="text-muted float-end">Hace 3 horas</small></h5>
-                                                    <p class="text-muted">Miguel, necesito que me envíes una documentación. Por favor, llámame</p>
+                                                    <p class="text-muted">Francisco, tenemos que hablar sobre un alumno. Llámame cuando puedas</p>
                                                     <a href="javascript: void(0);" class="text-muted font-13 d-inline-block"><i class="mdi mdi-close-thick"></i> Descartar</a>
                                                 </div>
                                             </div>
@@ -310,18 +249,18 @@
                                             <div class="mt-4"><h4 class="font-size-18 border-bottom-2px mb-3 mt-2">Descartadas</h4></div>
                                             
                                             <div class="d-flex align-items-start border-bottom py-4">
-                                                <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/francisco-romero.jpg" alt="">
+                                                <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-7.jpg" alt="">
                                                 <div class="flex-grow-1">
-                                                    <h5 class="font-size-15 mt-0 mb-1">Francisco Romero <small class="text-muted float-end">Hace 15 días</small></h5>
-                                                    <p class="text-muted">Tienes que detallar más los reportes diarios</p>
+                                                    <h5 class="font-size-15 mt-0 mb-1">Antonio Sánchez <small class="text-muted float-end">Hace 15 días</small></h5>
+                                                    <p class="text-muted">Estoy cansado de sólo hacer fotocopias en esta empresa</p>
                                                     <a class="text-muted font-13 d-inline-block">Descartada</a>
                                                 </div>
                                             </div>
                                             <div class="d-flex align-items-start border-bottom py-4">
-                                                <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-6.jpg" alt="">
+                                                <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-4.jpg" alt="">
                                                 <div class="flex-grow-1">
-                                                    <h5 class="font-size-15 mt-0 mb-1">Carlos Raigón <small class="text-muted float-end">El mes pasado</small></h5>
-                                                    <p class="text-muted">Miguel, sólo para comunicarte que Claroflex ha aceptado y te incorporas la semana que viene</p>
+                                                    <h5 class="font-size-15 mt-0 mb-1">Eva María <small class="text-muted float-end">El mes pasado</small></h5>
+                                                    <p class="text-muted">Necesito que hablemos sobre mis funciones en la empresa en la que estoy porque...</p>
                                                     <a class="text-muted font-13 d-inline-block">Descartada</a>
                                                 </div>
                                             </div>

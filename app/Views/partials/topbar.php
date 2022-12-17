@@ -232,8 +232,8 @@ $user_data = $GLOBALS['user_data'];
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
                     <a class="dropdown-item" href="<?php
-                        if( $user_data['rol'] == 'teacher' ) echo '/teachers-profile';
-                        else echo '/students-profile';
+                        if( $user_data['rol'] == 'teacher' ) echo '/teacher-profile';
+                        else echo '/student-profile';
                     ?>"><i class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span class="align-middle"><?= lang('Files.View Profile') ?></span></a>
                     <a class="dropdown-item d-block" href="#"><i class="uil uil-cog font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle"> Configuración</span></a>
                     <a class="dropdown-item" href="/auth-logout"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle"><?= lang('Files.Sign out') ?></span></a>

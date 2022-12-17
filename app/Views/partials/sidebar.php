@@ -38,11 +38,13 @@
                         <a href="/teacher-profile"> <i class="uil-user-circle"></i> <span>Mi perfil</span></a>
                     </li>
                     <li>
+<?php /*
                         <a href="chat">
                             <i class="uil-comments-alt"></i>
                             <span class="badge rounded-pill bg-warning float-end">2</span>
                             <span><?= lang('Files.Chat') ?></span>
                         </a>
+*/ ?>
                     </li>
                     <li class="menu-title">Administración</li>
                     <li>
@@ -62,12 +64,6 @@
                         <a href="/reports"> <i class="uil-file-copy-alt"></i> <span>Reportes</span></a>
                     </li>
                     <li>
-                        <a href="chat">
-                            <i class="uil-comments-alt"></i>
-                            <span class="badge rounded-pill bg-warning float-end">2</span>
-                            <span><?= lang('Files.Chat') ?></span>
-                        </a>
-                    </li>
                 <?php endif; ?>
             </ul>
         </div>

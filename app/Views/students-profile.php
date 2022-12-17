@@ -45,7 +45,7 @@
                                     <div>
                                         <img src="assets/images/users/miguel_carmona.jpg" alt="" class="avatar-lg rounded-circle img-thumbnail">
                                     </div>
-                                    <h5 class="mt-3 mb-1"><?php echo $user_data['name']; ?></h5>
+                                    <h5 class="mt-3 mb-1">Miguel Carmona</h5>
                                     <p class="text-muted">2º DAW - DUAL</p>
                                 </div>
 
@@ -151,7 +151,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -164,7 +164,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -177,7 +177,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -190,7 +190,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -203,7 +203,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -216,7 +216,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -229,7 +229,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -242,7 +242,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -255,7 +255,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -268,7 +268,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="uil uil-ellipsis-v"></i></a>
                                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                                        <a class="dropdown-item" href="#">Modificar</a>
+                                                                        <a class="dropdown-item" href="/reports">Modificar</a>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -322,7 +322,7 @@
                                             <div class="d-flex align-items-start border-bottom py-4">
                                                 <img class="me-2 rounded-circle avatar-xs" src="assets/images/users/avatar-6.jpg" alt="">
                                                 <div class="flex-grow-1">
-                                                    <h5 class="font-size-15 mt-0 mb-1">Carlos Raigón <small class="text-muted float-end">El mes pasado</small></h5>
+                                                    <h5 class="font-size-15 mt-0 mb-1">Carlos Raigón <small class="text-muted float-end">Hace 2 meses</small></h5>
                                                     <p class="text-muted">Miguel, sólo para comunicarte que Claroflex ha aceptado y te incorporas la semana que viene</p>
                                                     <a class="text-muted font-13 d-inline-block">Descartada</a>
                                                 </div>
