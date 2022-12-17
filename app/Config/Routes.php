@@ -43,7 +43,7 @@ $routes->get('students-reports', 'Reports::list');
 
 // Teachers
 $routes->get('teacher-profile', 'Teachers::profile');
-$routes->get('teachers-list', 'Teachers::users_list');
+$routes->get('teachers-list', 'Teachers::list');
 
 // Chat
 $routes->get('chat', 'Chat::show_chat');

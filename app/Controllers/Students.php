@@ -25,10 +25,10 @@ class Students extends BaseController
 	 */
 	public function list() {
 		$data = [
-			'title_meta' => view('partials/title-meta', ['title' => 'Listado de usuarios']),
-			'page_title' => view('partials/page-title', ['title' => 'Usuarios', 'pagetitle' => 'Listado'])
+			'title_meta' => view('partials/title-meta', ['title' => 'Listado de alumnos']),
+			'page_title' => view('partials/page-title', ['title' => 'Alumnos', 'pagetitle' => 'Listado'])
 		];
-		return view('students_list', $data);
+		return view('students-list', $data);
 
 	}
 

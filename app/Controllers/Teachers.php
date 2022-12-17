@@ -25,10 +25,10 @@ class Teachers extends BaseController
 	 */
 	public function list() {
 		$data = [
-			'title_meta' => view('partials/title-meta', ['title' => 'Listado de usuarios']),
-			'page_title' => view('partials/page-title', ['title' => 'Usuarios', 'pagetitle' => 'Listado'])
+			'title_meta' => view('partials/title-meta', ['title' => 'Listado de profesores']),
+			'page_title' => view('partials/page-title', ['title' => 'Profesores', 'pagetitle' => 'Listado'])
 		];
-		return view('teachers_list', $data);
+		return view('teachers-list', $data);
 
 	}
 
