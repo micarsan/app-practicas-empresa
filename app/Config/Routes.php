@@ -46,7 +46,7 @@ $routes->get('teacher-profile', 'Teachers::profile');
 $routes->get('teachers-list', 'Teachers::list');
 
 // Companies
-$routes->get('compani-profile', 'Companies::profile');
+$routes->get('company-profile', 'Companies::profile');
 $routes->get('companies-list', 'Companies::list');
 
 // Chat

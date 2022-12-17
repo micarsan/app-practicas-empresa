@@ -50,8 +50,11 @@
         div.dataTables_wrapper a[type="button"] {
             font-size: 1.2rem;
         }
-        div.dataTables_wrapper a[type="button"]:first-child {
+        div.dataTables_wrapper a[type="button"] {
             margin-right: 5px;
+        }
+        div.dataTables_wrapper a[type="button"]:last-child {
+            margin-right: 0px;
         }
 
     </style>
@@ -300,26 +303,12 @@
         });
 
 
-
-
-        // setTimeout(() => {
-        //     document.querySelectorAll('.edit').forEach(function(item) {
-        //         item.addEventListener('click', function() {
-        //             console.log(this.parentNode);
-
-        //         });
-        //     });
-        // }, "200");
-
         // Date selector
         flatpickr('.flatpickr-date', {
             defaultDate: '01/01/2000',
             dateFormat: "d/m/Y",
             'locale': 'es'
         });
-
-        // Multiple selector
-        $(".select2").select2();
 
 
     });

@@ -50,8 +50,11 @@
         div.dataTables_wrapper a[type="button"] {
             font-size: 1.2rem;
         }
-        div.dataTables_wrapper a[type="button"]:first-child {
+        div.dataTables_wrapper a[type="button"] {
             margin-right: 5px;
+        }
+        div.dataTables_wrapper a[type="button"]:last-child {
+            margin-right: 0px;
         }
 
     </style>
@@ -319,6 +322,7 @@
                     "render": function ( data, type, row, meta ) {
                         return ''+
                         '<div class="d-flex">'+
+                            '<a type="button" href="/reports?student='+meta.row+'" style="color: inherit;"><i class="uil-file-copy-alt"></i></a>'+
                             '<a type="button" href="/student-profile?id='+meta.row+'" style="color: inherit;"><i class="uil-eye"></i></a>'+
                             '<a type="button" onclick="update_data('+meta.row+')" data-bs-toggle="modal" data-bs-target="#userform"><i class="uil-pen"></i></a>'+
                             '<a type="button" onclick="delete_user('+meta.row+')" data-bs-toggle="modal" data-bs-target="#deluser"><i class="uil-trash-alt"></i></a>'+

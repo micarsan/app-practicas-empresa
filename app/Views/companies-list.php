@@ -50,8 +50,11 @@
         div.dataTables_wrapper a[type="button"] {
             font-size: 1.2rem;
         }
-        div.dataTables_wrapper a[type="button"]:first-child {
+        div.dataTables_wrapper a[type="button"] {
             margin-right: 5px;
+        }
+        div.dataTables_wrapper a[type="button"]:last-child {
+            margin-right: 0px;
         }
 
     </style>
@@ -82,7 +85,7 @@
                                 <div class="d-flex align-items-center justify-content-between flex-wrap">
                                     <div class="d-flex align-items-center">
                                         <h4 class="mb-0">Listado de empresas</h4>
-                                        <a type="button" style="margin-left: 15px;" class="btn btn-primary userform" data-bs-toggle="modal" onclick="new_user();" data-bs-target="#userform"><i class="uil-building"></i> Nueva</a>
+                                        <a type="button" style="margin-left: 15px;" class="btn btn-primary userform" data-bs-toggle="modal" onclick="new_company();" data-bs-target="#companyform"><i class="uil-building"></i> Nueva</a>
                                     </div>
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
@@ -96,14 +99,14 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <table id="user_list" class="table table-striped table-bordered dt-responsive wrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <table id="companies_list" class="table table-striped table-bordered dt-responsive wrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 </table>
                             </div>
                         </div>
                     </div> <!-- end col -->
                 </div> <!-- end row -->
 
-                <div class="modal fade" id="userform" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+                <div class="modal fade" id="companyform" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
                     <div class="modal-dialog" style="width: 800px; max-width: 95vw;">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -114,73 +117,22 @@
                                 <form action="/" method="post">
                                     <div class="row">
                                         <div class="col-md-6 mb-2">
-                                            <label for="name" class="col-form-label">Nombre</label>
-                                            <input type="text" class="form-control active" name="name" id="name">
+                                            <label for="company" class="col-form-label">Nombre de la compañía</label>
+                                            <input type="text" class="form-control active" name="company" id="company">
                                         </div>
                                         <div class="col-md-6 mb-2">
-                                            <label for="surname" class="col-form-label">Apellidos</label>
-                                            <input type="text" class="form-control active" name="surname" id="surname">
+                                            <label for="manager" class="col-form-label">Nombre de la persona responsable</label>
+                                            <input type="text" class="form-control active" name="manager" id="manager">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-2">
-                                            <label for="email" class="col-form-label">email</label>
+                                            <label for="email" class="col-form-label">email de contacto</label>
                                             <input type="email" class="form-control active" name="email" id="email">
                                         </div>
                                         <div class="col-md-6 mb-2">
-                                            <label for="password" class="col-form-label">Contraseña</label>
-                                            <input type="password" class="form-control active" name="password" id="password">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4 mb-2">
-                                            <label for="birthday" class="col-form-label">Fecha de nacimiento</label>
-                                            <input type="text" class="form-control flatpickr-date active" name="birthday" id="birthday">
-                                        </div>
-                                        <div class="col-md-4 mb-2">
-                                            <label for="dni" class="col-form-label">DNI</label>
-                                            <input type="text" class="form-control active" name="dni" id="dni">
-                                        </div>
-                                        <div class="col-md-4 mb-2">
                                             <label for="phone" class="col-form-label">Teléfono</label>
                                             <input type="tel" class="form-control active" name="phone" id="phone">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-2">
-                                            <label for="course" class="col-form-label">Curso</label>
-                                            <select class="form-select" name="course" id="course">
-                                                <option>2º DAW</option>
-                                                <option>1º DAW</option>
-                                                <option>2º DAM</option>
-                                                <option>1º DAM</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6 mb-2">
-                                            <label for="teacher" class="col-form-label">Profesor asignado</label>
-                                            <select class="form-select" name="teacher" id="teacher">
-                                                <option>Francisco Romero</option>
-                                                <option>Victor Manuel Navarro</option>
-                                                <option>José Carlos Márquez</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-2">
-                                            <label for="company" class="col-form-label">Empresa</label>
-                                            <select class="form-select" id="company">
-                                                <option>Empresa 1</option>
-                                                <option>Empresa 2</option>
-                                                <option>Empresa 3</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3 mb-2">
-                                            <label for="dual" class="col-form-label">Horas a cursar DUAL</label>
-                                            <input type="number" class="form-control active" name="dual" id="dual">
-                                        </div>
-                                        <div class="col-md-3 mb-2">
-                                            <label for="fct" class="col-form-label">Horas a cursar FCT</label>
-                                            <input type="number" class="form-control active" name="fct" id="fct">
                                         </div>
                                     </div>
                                     <div class="">
@@ -197,16 +149,16 @@
                     </div>
                 </div>
 
-                <div class="modal fade" id="deluser" tabindex="-1" aria-labelledby="delLabel" aria-hidden="true">
+                <div class="modal fade" id="delcompany" tabindex="-1" aria-labelledby="delLabel" aria-hidden="true">
                     <div class="modal-dialog" style="width: 400px; max-width: 95vw;">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="delLabel">Eliminar alumno</h5>
+                                <h5 class="modal-title" id="delLabel">Eliminar la empresa</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="row">
-                                <div class="col-md-12 mb-2 text-center alert alert-danger" role="alert"><h5>¿Seguro que desea eliminar al alumno<br><span id="delusername"></span> ?</h5></div>
+                                <div class="col-md-12 mb-2 text-center alert alert-danger" role="alert"><h5>¿Seguro que desea eliminar la empresa<br><span id="delcompanyname"></span> ?</h5></div>
                                 <div class="col-md-12 mb-2 text-center alert alert-warning">¡Se borrarán todos sus datos asociados!</div>
                             </div>
                             <div class="modal-footer">
@@ -263,65 +215,48 @@
 <script src="assets/libs/flatpickr/l10n/es.js"></script>
 
 
-<script src="/assets/data/students_data.js"></script>
+<script src="/assets/data/companies_data.js"></script>
 <script>
-    function new_user() {
-        document.querySelector('#editLabel').innerHTML = 'Nuevo alumno';
-        document.querySelector('input#name').value = '';
-        document.querySelector('input#surname').value = '';
-        document.querySelector('input#dni').value = '';
-        document.querySelector('input#password').value = '';
-        document.querySelector('input#birthday').value = '';
+    function new_company() {
+        document.querySelector('#editLabel').innerHTML = 'Nueva empresa';
+        document.querySelector('input#company').value = '';
+        document.querySelector('input#manager').value = '';
         document.querySelector('input#email').value = '';
         document.querySelector('input#phone').value = '';
-        document.querySelector('input#dual').value = '';
-        document.querySelector('input#fct').value = '';
     }
 
     function update_data(key) {
         document.querySelector('#editLabel').innerHTML = 'Editar alumno';
         let data = user_data[key];
-        document.querySelector('input#name').value = data['name'];
-        document.querySelector('input#surname').value = data['surname'];
-        document.querySelector('input#dni').value = data['dni'];
-        document.querySelector('input#password').value = 'ausbnd@dfh8$9GHFAHSDF';
-        document.querySelector('input#birthday').value = data['birthday'];
+        document.querySelector('input#company').value = data['company'];
+        document.querySelector('input#manager').value = data['manager'];
         document.querySelector('input#email').value = data['email'];
         document.querySelector('input#phone').value = data['phone'];
-        document.querySelector('input#dual').value = data['DUAL'];
-        document.querySelector('input#fct').value = data['FCT'];
     }
 
-    function delete_user(key){
+    function delete_company(key){
         let data = user_data[key];
         console.log(data);
-        document.querySelector('#delusername').innerHTML = '<strong>'+data['name']+' '+data['surname']+ '</strong> de <strong>'+data['course']+'</strong>';
+        document.querySelector('#delcompanyname').innerHTML = '<strong>'+data['company']+' '+data['surname']+ '</strong>';
     }
 
     $(document).ready(function() {
 
-        $('#user_list').DataTable({
+        $('#companies_list').DataTable({
             data: user_data,
             columns: [
-                { title: 'DNI', data: 'dni' },
-                { title: 'Nombre', data: 'name' },
-                { title: 'Apellidos', data: 'surname' },
-                { title: 'Empresa.', data: 'company' },
-                { title: 'Curso', data: 'course' },
-                { title: 'Tutor', data: 'tutor' },
-                { title: 'F. Nac.', data: 'birthday' },
+                { title: 'Empresa', data: 'company' },
+                { title: 'Responsable', data: 'manager' },
                 { title: 'email', data: 'email' },
                 { title: 'Teléfono', data: 'phone' },
-                { title: 'DUAL', data: 'DUAL' },
-                { title: 'FCT', data: 'FCT' },
+                { title: 'Nº Alum.', data: 'num_students' },
                 {
                     "data": null,
                     "render": function ( data, type, row, meta ) {
                         return ''+
                         '<div class="d-flex">'+
-                            '<a type="button" href="/student-profile?id='+meta.row+'" style="color: inherit;"><i class="uil-eye"></i></a>'+
-                            '<a type="button" onclick="update_data('+meta.row+')" data-bs-toggle="modal" data-bs-target="#userform"><i class="uil-pen"></i></a>'+
-                            '<a type="button" onclick="delete_user('+meta.row+')" data-bs-toggle="modal" data-bs-target="#deluser"><i class="uil-trash-alt"></i></a>'+
+                            '<a type="button" onclick="update_data('+meta.row+')" data-bs-toggle="modal" data-bs-target="#companyform"><i class="uil-pen"></i></a>'+
+                            '<a type="button" onclick="delete_company('+meta.row+')" data-bs-toggle="modal" data-bs-target="#delcompany"><i class="uil-trash-alt"></i></a>'+
                         '</div>';
                     }
                 },
@@ -337,26 +272,14 @@
             "columnDefs": [
                 {   
                     'width': '1%',
-                    targets: [4,9,10],
+                    targets: [4],
                     className: 'table-center',
                     visible: true
                 },
-                {   
-                    'width': '5%',
-                    targets: [0,6,8],
-                    className: 'table-center',
-                    visible: false
-                },
                 {
                     'width': '10%',
-                    targets: [1,2,3,5,8],
+                    targets: [0,1,2,3],
                     className: 'table-left'
-                },
-                {
-                    'width': '10%',
-                    targets: [7],
-                    className: 'table-left',
-                    visible: false
                 },
                 {
                     'width': '1%',
@@ -364,7 +287,7 @@
                     "searchable": false,
                     "orderable": false,
                     "visible": true,
-                    targets: 11,
+                    targets: [5],
                     className: 'table-center'
                 }
             ],
