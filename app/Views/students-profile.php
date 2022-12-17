@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="clearfix"></div>
                                     <div>
-                                        <img src="assets/images/users/<?php echo $user_data['avatar']; ?>" alt="" class="avatar-lg rounded-circle img-thumbnail">
+                                        <img src="assets/images/users/miguel_carmona.jpg" alt="" class="avatar-lg rounded-circle img-thumbnail">
                                     </div>
                                     <h5 class="mt-3 mb-1"><?php echo $user_data['name']; ?></h5>
                                     <p class="text-muted">2º DAW - DUAL</p>
@@ -107,12 +107,14 @@
                                         <span class="d-none d-sm-block">Calendario</span>
                                     </a>
                                 </li>
+<?php if($GLOBALS['user_data']['rol'] == 'student'): ?>
                                 <li class="nav-item">
                                     <a class="nav-link" data-bs-toggle="tab" href="#notifications" role="tab">
                                         <i class="uil uil-envelope-alt font-size-20"></i>
                                         <span class="d-none d-sm-block">Notificaciones</span>
                                     </a>
                                 </li>
+<?php endif; ?>
                             </ul>
                             <!-- Tab content -->
                             <div class="tab-content p-4">

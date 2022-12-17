@@ -257,6 +257,7 @@
                     "render": function ( data, type, row, meta ) {
                         return ''+
                         '<div class="d-flex">'+
+                            '<a type="button" href="/teacher-profile?id='+meta.row+'" style="color: inherit;"><i class="uil-eye"></i></a>'+
                             '<a type="button" onclick="update_data('+meta.row+')" data-bs-toggle="modal" data-bs-target="#userform"><i class="uil-pen"></i></a>'+
                             '<a type="button" onclick="delete_user('+meta.row+')" data-bs-toggle="modal" data-bs-target="#deluser"><i class="uil-trash-alt"></i></a>'+
                         '</div>';

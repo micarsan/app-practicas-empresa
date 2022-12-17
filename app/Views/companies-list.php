@@ -81,12 +81,12 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between flex-wrap">
                                     <div class="d-flex align-items-center">
-                                        <h4 class="mb-0">Listado de alumnos</h4>
-                                        <a type="button" style="margin-left: 15px;" class="btn btn-primary userform" data-bs-toggle="modal" onclick="new_user();" data-bs-target="#userform"><i class="uil-user-plus"></i> Nuevo</a>
+                                        <h4 class="mb-0">Listado de empresas</h4>
+                                        <a type="button" style="margin-left: 15px;" class="btn btn-primary userform" data-bs-toggle="modal" onclick="new_user();" data-bs-target="#userform"><i class="uil-building"></i> Nueva</a>
                                     </div>
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a>Alumnos</a></li>
+                                            <li class="breadcrumb-item"><a>Empresas</a></li>
                                             <li class="breadcrumb-item active">Listado</li>
                                         </ol>
                                     </div>

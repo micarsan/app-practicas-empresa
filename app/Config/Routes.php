@@ -45,6 +45,10 @@ $routes->get('students-reports', 'Reports::list');
 $routes->get('teacher-profile', 'Teachers::profile');
 $routes->get('teachers-list', 'Teachers::list');
 
+// Companies
+$routes->get('compani-profile', 'Companies::profile');
+$routes->get('companies-list', 'Companies::list');
+
 // Chat
 $routes->get('chat', 'Chat::show_chat');
 

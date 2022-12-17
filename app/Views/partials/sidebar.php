@@ -56,7 +56,7 @@
                     </li>
                 <?php else : ?>
                     <li>
-                        <a href="/user-profile"> <i class="uil-user-circle"></i> <span>Mi perfil</span></a>
+                        <a href="/student-profile"> <i class="uil-user-circle"></i> <span>Mi perfil</span></a>
                     </li>
                     <li>
                         <a href="/reports"> <i class="uil-file-copy-alt"></i> <span>Reportes</span></a>
