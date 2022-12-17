@@ -17,7 +17,6 @@ class Teachers extends BaseController
 			'page_title' => view('partials/page-title', ['title' => 'Teacher profile', 'pagetitle' => 'Profile']),
 			'user_data' => $GLOBALS['user_data']
 		];
-		
 		return view('teachers-profile', $data);
 	}
 

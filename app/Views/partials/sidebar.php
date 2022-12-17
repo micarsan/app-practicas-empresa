@@ -33,12 +33,18 @@
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
                     
-                    <li>
-                        <a href="/user-profile"> <i class="uil-user-circle"></i> <span>Mi perfil</span></a>
-                    </li>
-
                 <?php if ($GLOBALS['user_data']['rol'] == 'teacher') : ?>
-                    <li class="menu-title">Gestionar</li>
+                    <li>
+                        <a href="/teacher-profile"> <i class="uil-user-circle"></i> <span>Mi perfil</span></a>
+                    </li>
+                    <li>
+                        <a href="chat">
+                            <i class="uil-comments-alt"></i>
+                            <span class="badge rounded-pill bg-warning float-end">2</span>
+                            <span><?= lang('Files.Chat') ?></span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Administración</li>
                     <li>
                         <a href="/students-list"> <i class="uil-users-alt"></i> <span>Alumnos</span></a>
                     </li>
@@ -48,14 +54,10 @@
                     <li>
                         <a href="/teachers-list"> <i class="uil-users-alt"></i> <span>Profesores</span></a>
                     </li>
-                    <li>
-                        <a href="chat">
-                            <i class="uil-comments-alt"></i>
-                            <span class="badge rounded-pill bg-warning float-end">2</span>
-                            <span><?= lang('Files.Chat') ?></span>
-                        </a>
-                    </li>
                 <?php else : ?>
+                    <li>
+                        <a href="/user-profile"> <i class="uil-user-circle"></i> <span>Mi perfil</span></a>
+                    </li>
                     <li>
                         <a href="/reports"> <i class="uil-file-copy-alt"></i> <span>Reportes</span></a>
                     </li>

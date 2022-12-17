@@ -46,6 +46,11 @@
         div.dataTables_wrapper div.buttons {
             text-align: right;
         }
+
+        div.dataTables_wrapper a[type="button"] {
+            font-size: 1.2rem;
+        }
+
     </style>
     
     <?= $this->include('partials/head-css') ?>
